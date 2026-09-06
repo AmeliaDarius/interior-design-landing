@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260904-05-c4a2e96","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/9e99ecf74af2a081.telemetry_sdk.js" integrity="sha512-tZ7fmfTx2KpCLjXQnEuL9azQ4A5+7+xumsx6r/WYVD0zCP/8LP8hDeCypMQesmP+WyAew4g7l5Ah23Bjd6yoVg=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Links Landing Page</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Libre+Baskerville:wght@400;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1e2520;
+      --moss: #33483d;
+      --paper: #f4f0e8;
+      --line: rgba(30, 37, 32, 0.16);
+      --coral: #e25e45;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      width: 100%;
+      min-height: calc(100 * min(var(--vh, 1vh), 1vh));
+      margin: 0;
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .page-shell {
+      width: 100%;
+      overflow: hidden;
+      background-image:
+        linear-gradient(rgba(30, 37, 32, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 37, 32, 0.035) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .content-frame {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+
+    .brand-mark {
+      font-family: "Libre Baskerville", serif;
+      letter-spacing: -0.04em;
+    }
+
+    .nav-link {
+      position: relative;
+      color: #4c574f;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 180ms ease;
+    }
+
+    .nav-link::after {
+      position: absolute;
+      right: 0;
+      bottom: -6px;
+      left: 0;
+      height: 2px;
+      content: "";
+      background: var(--coral);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 180ms ease;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus-visible {
+      color: var(--ink);
+    }
+
+    .nav-link:hover::after,
+    .nav-link:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.03fr 0.97fr;
+      gap: clamp(2rem, 6vw, 6.5rem);
+      align-items: center;
+      padding: clamp(4.5rem, 9vw, 8.5rem) 0 clamp(4rem, 8vw, 7rem);
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 1.4rem;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 2.8rem;
+      height: 1px;
+      content: "";
+      background: currentColor;
+    }
+
+    .hero-title {
+      max-width: 710px;
+      margin: 0;
+      font-family: "Libre Baskerville", serif;
+      font-size: clamp(3.1rem, 7vw, 6.5rem);
+      font-weight: 700;
+      letter-spacing: -0.07em;
+      line-height: 0.98;
+    }
+
+    .hero-copy {
+      max-width: 540px;
+      margin: 1.7rem 0 2.2rem;
+      font-size: clamp(1.05rem, 1.7vw, 1.28rem);
+      line-height: 1.65;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      min-height: 3.5rem;
+      padding: 0.9rem 1.2rem;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+
+    .hero-cta:hover {
+      box-shadow: 7px 8px 0 #aebeae;
+      transform: translate(-3px, -3px);
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      padding: 0.85rem;
+      background: var(--moss);
+      box-shadow: 15px 17px 0 rgba(30, 37, 32, 0.12);
+      transform: rotate(2deg);
+    }
+
+    .hero-photo-wrap::before {
+      position: absolute;
+      top: -1.3rem;
+      left: -1.3rem;
+      width: 5rem;
+      height: 5rem;
+      content: "";
+      border: 1px solid var(--coral);
+      border-radius: 50%;
+    }
+
+    .hero-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .section-rule {
+      border-top: 1px solid var(--line);
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(2rem, 4vw, 4rem);
+      padding: clamp(4.5rem, 8vw, 7rem) 0;
+    }
+
+    .section-kicker {
+      margin: 0 0 0.7rem;
+      color: #637268;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin: 0;
+      font-family: "Libre Baskerville", serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      letter-spacing: -0.055em;
+      line-height: 1;
+    }
+
+    .about-copy {
+      max-width: 720px;
+      margin: 0 auto;
+      justify-self: center;
+      align-self: center;
+      font-size: clamp(1.15rem, 2vw, 1.48rem);
+      line-height: 1.65;
+    }
+
+    .gallery-intro {
+      max-width: 650px;
+      margin: 0 0 2rem;
+      color: #58645c;
+      line-height: 1.6;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1rem;
+    }
+
+    .gallery-card {
+      position: relative;
+      min-height: 230px;
+      overflow: hidden;
+      background: #d6ddd4;
+      isolation: isolate;
+    }
+
+    .gallery-card:nth-child(1),
+    .gallery-card:nth-child(6) {
+      grid-column: span 7;
+    }
+
+    .gallery-card:nth-child(2),
+    .gallery-card:nth-child(3),
+    .gallery-card:nth-child(4),
+    .gallery-card:nth-child(5) {
+      grid-column: span 5;
+    }
+
+    .gallery-card:nth-child(1) { aspect-ratio: 1.25 / 1; }
+    .gallery-card:nth-child(2) { aspect-ratio: 1 / 1.08; }
+    .gallery-card:nth-child(3) { aspect-ratio: 1 / 1.08; }
+    .gallery-card:nth-child(4) { aspect-ratio: 1 / 1.08; }
+    .gallery-card:nth-child(5) { aspect-ratio: 1 / 1.08; }
+    .gallery-card:nth-child(6) { aspect-ratio: 1.25 / 1; }
+
+    .gallery-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 500ms cubic-bezier(.2,.7,.2,1), filter 350ms ease;
+    }
+
+    .gallery-card:hover .gallery-image,
+    .gallery-card:focus-within .gallery-image {
+      filter: saturate(1.1);
+      transform: scale(1.055);
+    }
+
+    .gallery-shade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(14, 19, 16, 0.72), rgba(14, 19, 16, 0) 58%);
+      pointer-events: none;
+    }
+
+    .gallery-caption {
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+      left: 1rem;
+      color: #fff;
+      font-size: 0.94rem;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .links-panel {
+      padding: clamp(1.5rem, 3.5vw, 2.35rem);
+      background: #e8e5dd;
+      border: 1px solid rgba(30, 37, 32, 0.12);
+      border-radius: 1.5rem;
+      box-shadow: 10px 12px 0 rgba(226, 94, 69, 0.14);
+    }
+
+    .links-description {
+      max-width: 600px;
+      margin: 0 0 1.8rem;
+      color: #58645c;
+      line-height: 1.6;
+    }
+
+    .links-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .link-button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 4rem;
+      padding: 0.95rem 1.15rem;
+      border: 1px solid rgba(30, 37, 32, 0.13);
+      border-radius: 999px;
+      background: #fff7ed;
+      color: var(--ink);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      box-shadow: 0 5px 0 rgba(30, 37, 32, 0.08);
+      transition: background 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .link-button:hover {
+      background: var(--coral);
+      color: #fff;
+      box-shadow: 0 7px 0 rgba(30, 37, 32, 0.12);
+      transform: translateY(-3px);
+    }
+
+    .link-button svg {
+      width: 1.1rem;
+      height: 1.1rem;
+      flex: none;
+    }
+
+    .footer-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.6rem 0 2rem;
+      border-top: 1px solid var(--line);
+      color: #637268;
+      font-size: 0.82rem;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--coral);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 760px) {
+      .content-frame {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .topbar nav {
+        display: none;
+      }
+
+      .hero-grid,
+      .section-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        gap: 3rem;
+      }
+
+      .hero-photo-wrap {
+        width: min(100%, 460px);
+        margin: 0 auto;
+      }
+
+      .gallery-card,
+      .gallery-card:nth-child(n) {
+        grid-column: span 12;
+        aspect-ratio: 1.2 / 1;
+      }
+
+      .links-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-line {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+  <script src="/_sdk/fbe2ebfd64647c54.data_sdk.js" type="text/javascript" integrity="sha512-vkTX6CfvpHc3WbjK+tFJCaDuw4ERA4aEV/e5/7+MMJPMTF4RJYCI6CAwJBT/gtDW+dba4uLSsPUgDjVDHWtgUQ=="></script>
+  <script src="/_sdk/fcb6dc01f91829ac.resizing_sdk.js" type="text/javascript" integrity="sha512-YK8JfnN705qaEaVhiL7pcVB2Rs/BbdX5yxV55Az8T/1JanyEWTw9HqCF915m9iV1YEaoil8qsjJz03l1Kb0Ug=="></script>
+ </head>
+ <body data-template-id="__page-root" class="w-full" style="background: rgb(244, 240, 232);">
+  <div class="page-shell">
+   <header class="topbar">
+    <div class="content-frame flex items-center justify-between py-5">
+     <a href="#top" class="brand-mark text-xl no-underline" aria-label="Back to top"> <span data-template-id="nav-brand" class="canva-text" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 16px;">ameliadarius.com</span> </a>
+     <nav aria-label="Primary navigation" class="flex items-center gap-7">
+      <a class="nav-link" href="#about">About</a> <a class="nav-link" href="#gallery">Gallery</a> <a class="nav-link" href="#links">All links</a>
+     </nav>
+    </div>
+   </header>
+   <main id="top" class="content-frame">
+    <section class="hero-grid" aria-labelledby="hero-name">
+     <div>
+      <p data-template-id="hero-eyebrow" class="canva-text eyebrow" style="color: rgb(226, 94, 69); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.1rem;">interior designer, lifestyle curator</p>
+      <h1 data-template-id="hero-name" class="canva-text hero-title" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 40px; line-height: 1;">Amelia Darius</h1>
+      <p data-template-id="hero-tagline" class="canva-text hero-copy" style="color: rgb(76, 87, 79); font-weight: 400; font-style: normal; font-size: 19px; line-height: 1.65;">If your home is not becoming to you,
+you need to be coming to us</p><a data-template-id="hero-cta" class="canva-button hero-cta" href="#links" style="background: rgb(51, 72, 61); color: rgb(255, 255, 255);"> <span data-template-id="hero-cta-text" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Explore all links</span> <i data-lucide="arrow-down-right" aria-hidden="true"></i> </a>
+     </div>
+     <div class="hero-photo-wrap">
+      <img data-template-id="hero-image" class="canva-image hero-photo" loading="lazy" src="canva://MAHUdGCcNPs/1" alt="Woman standing beside a coffee table in a bright living room">
+     </div>
+    </section>
+    <section id="about" class="section-rule section-grid" aria-labelledby="about-title">
+     <div>
+      <p data-template-id="about-kicker" class="canva-text section-kicker" style="color: rgb(99, 114, 104); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.1rem;">                                                                                A little about me</p>
+      <h2 data-template-id="about-title" class="canva-text section-title" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 29px;">                                                                                        About</h2>
+     </div>
+     <p data-template-id="about-copy" class="canva-text about-copy" style="color: rgb(51, 72, 61); font-weight: 400; font-style: italic; font-size: 23px; line-height: 1.65;">Born and raised in the San Francisco Bay Area, Amelia comes from a family of Interior Designers. It all started with her Grandfather Saviour Schembri who was a Furniture Designer for Randolph and Hein. He was commissioned to create furniture for Madonna's personal residence in Los Angeles, many NBA players as well as TV sets like Falcon Crest (just to name a few). It was through his teaching of textiles and furniture design that her interest was sparked.  Amelia has over 30 years in the Real Estate Industry ranging from Title &amp; Escrow Management as well as a successful investor of several profitable short term rentals in the states and abroad. She has a keen sense of the industry as a whole from the legalities of permits and lot lines, mixed with an eye for design. She can help guide you through the whole process whether it is a full remodel, refreshing your home or just in need of some organization. </p>
+    </section>
+    <section id="gallery" class="section-rule section-grid" aria-labelledby="gallery-title">
+     <div>
+      <p data-template-id="gallery-kicker" class="canva-text section-kicker" style="color: rgb(99, 114, 104); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.1rem;">                                                                                </p>
+      <h2 data-template-id="gallery-title" class="canva-text section-title" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 24px;">                                                                                                           </h2>
+     </div>
+     <div>
+      <p data-template-id="gallery-description" class="canva-text gallery-intro" style="color: rgb(88, 100, 92); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;"></p>
+      <div class="gallery-grid">
+       <figure class="gallery-card">
+        <img data-template-id="gallery-image-1" class="canva-image gallery-image" loading="lazy" src="canva://MAHUdJLEdGc/1" alt="Bright living room with panoramic city views through floor-to-ceiling windows">
+        <div class="gallery-shade"></div>
+        <figcaption data-template-id="gallery-caption-1" class="canva-text gallery-caption" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;"></figcaption>
+       </figure>
+       <figure class="gallery-card">
+        <img data-template-id="gallery-image-2" class="canva-image gallery-image" loading="lazy" src="canva://MAHUZ8QcsJU/1" alt="Editable gallery image placeholder two">
+        <div class="gallery-shade"></div>
+        <figcaption data-template-id="gallery-caption-2" class="canva-text gallery-caption" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;"></figcaption>
+       </figure>
+       <figure class="gallery-card">
+        <img data-template-id="gallery-image-3" class="canva-image gallery-image" loading="lazy" src="canva://MAHUdHlT0-E/1" alt="Bright modern kitchen with white cabinets, island countertop, pendant lights, and wood ceiling">
+        <div class="gallery-shade"></div>
+        <figcaption data-template-id="gallery-caption-3" class="canva-text gallery-caption" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;"></figcaption>
+       </figure>
+       <figure class="gallery-card">
+        <img data-template-id="gallery-image-4" class="canva-image gallery-image" loading="lazy" src="canva://MAHUdAu04SI/1" alt="Woman standing beside a wooden coffee table in a bright living room">
+        <div class="gallery-shade"></div>
+        <figcaption data-template-id="gallery-caption-4" class="canva-text gallery-caption" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;"></figcaption>
+       </figure>
+       <figure class="gallery-card">
+        <img data-template-id="gallery-image-5" class="canva-image gallery-image" loading="lazy" src="canva://MAHUdLrj9OM/1" alt="Woman seated in a chair overlooking a city skyline through floor-to-ceiling windows">
+        <div class="gallery-shade"></div>
+        <figcaption data-template-id="gallery-caption-5" class="canva-text gallery-caption" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;"></figcaption>
+       </figure>
+       <figure class="gallery-card">
+        <img data-template-id="gallery-image-6" class="canva-image gallery-image" loading="lazy" src="canva://MAHUdHZF78Y/1" alt="Rooftop swimming pool overlooking a city skyline">
+        <div class="gallery-shade"></div>
+        <figcaption data-template-id="gallery-caption-6" class="canva-text gallery-caption" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;"></figcaption>
+       </figure>
+      </div>
+     </div>
+    </section>
+    <section id="links" class="section-rule section-grid" aria-labelledby="links-title">
+     <div>
+      <p data-template-id="links-kicker" class="canva-text section-kicker" style="color: rgb(99, 114, 104); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.1rem;">                                                                                  Find me elsewhere</p>
+      <h2 data-template-id="links-title" class="canva-text section-title" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 29px;">                                                                                         All links</h2>
+     </div>
+     <div data-template-id="links-panel" class="canva-panel links-panel" style="background: rgb(232, 229, 221);">
+      <p data-template-id="links-description" class="canva-text links-description" style="color: rgb(88, 100, 92); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">
+</p>
+      <nav class="links-list" aria-label="External links">
+       <a data-template-id="website-link" class="canva-button link-button" href="https://www.instagram.com/disegno_home" target="_blank" rel="noopener noreferrer" style="background: rgb(255, 247, 237); color: rgb(30, 37, 32);"> <span data-template-id="website-link-text" class="canva-text" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 16px;">Follow me on my Instagram Design page</span> </a> <a data-template-id="instagram-link" class="canva-button link-button" href="https://www.instagram.com/amelia_the_nomad" target="_blank" rel="noopener noreferrer" style="background: rgb(255, 247, 237); color: rgb(30, 37, 32);"> <span data-template-id="instagram-link-text" class="canva-text" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 16px;">Follow me on my personal Instagram</span> </a> <a data-template-id="tiktok-link" class="canva-button link-button" href="https://www.airbnb.com/h/midcenturytreehouse" target="_blank" rel="noopener noreferrer" style="background: rgb(255, 247, 237); color: rgb(30, 37, 32);"> <span data-template-id="tiktok-link-text" class="canva-text" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 16px;">Stay in my Mid Century Modern Home</span> </a> <a data-template-id="youtube-link" class="canva-button link-button" href="https://www.amazon.com/shop/amelia_the_nomad" target="_blank" rel="noopener noreferrer" style="background: rgb(255, 247, 237); color: rgb(30, 37, 32);"> <span data-template-id="youtube-link-text" class="canva-text" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 16px;">Shop my Decor favorites</span> </a> <a data-template-id="linkedin-link" class="canva-button link-button" href="https://www.airbnb.com/h/oaktreehousestudio" target="_blank" rel="noopener noreferrer" style="background: rgb(255, 247, 237); color: rgb(30, 37, 32);"> <span data-template-id="linkedin-link-text" class="canva-text" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 16px;">Stay in my Tiny Zen Tree House</span> </a> <a data-template-id="email-link" class="canva-button link-button" href="https://www.instagram.com/curated_dtla?stkn=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener noreferrer" style="background: rgb(255, 247, 237); color: rgb(30, 37, 32);"> <span data-template-id="email-link-text" class="canva-text" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 16px;">Shop my personal Vintage Decor</span> </a> <a data-template-id="custom-link" class="canva-button link-button" href="https://www.airbnb.com/htulumzenvibes" target="_blank" rel="noopener noreferrer" style="background: rgb(255, 247, 237); color: rgb(30, 37, 32);"> <span data-template-id="custom-link-text" class="canva-text" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 16px;">Stay in my Tulum Escape</span> </a> <a data-template-id="design-instagram-link" class="canva-button link-button" href="https://www.etsy.com/shop/OystroHaus" target="_blank" rel="noopener noreferrer" style="background: rgb(255, 247, 237); color: rgb(30, 37, 32);"> <span data-template-id="design-instagram-link-text" class="canva-text" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 16px;">Shop my Oystro Haus Oyster Decor</span> </a>
+      </nav>
+     </div>
+    </section>
+    <footer class="footer-line">
+     <p data-template-id="footer-name" class="canva-text m-0" style="color: rgb(99, 114, 104); font-weight: 400; font-style: normal; font-size: 16px;">amelia darius</p>
+     <p data-template-id="footer-note" class="canva-text m-0" style="color: rgb(99, 114, 104); font-weight: 400; font-style: italic; font-size: 16px;">Made to be shared.</p>
+    </footer>
+   </main>
+  </div>
+  <script src="/_sdk/5629ea66dc55d54f.editing_sdk.js" integrity="sha512-snPYzGvgiTEMUBOb+HlCBkFeiM0IRX4hcgA78wvalhC0WnJtaX+RCbosPWtNqZsZ7sZ9NwN0oePZYa+IlMwa+w=="></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      lucide.createIcons();
+    });
+  </script>
+ 
+</body></html>
