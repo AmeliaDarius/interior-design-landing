@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260904-05-c4a2e96","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/9e99ecf74af2a081.telemetry_sdk.js" integrity="sha512-tZ7fmfTx2KpCLjXQnEuL9azQ4A5+7+xumsx6r/WYVD0zCP/8LP8hDeCypMQesmP+WyAew4g7l5Ah23Bjd6yoVg=="></script>
+<html lang="en"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260904-05-c4a2e96","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A[...]');</script><script src="/_sdk/9e99ecf74af2a081.telemetry_sdk.js" integrity="sha512-tZ7fmfTx2KpCLjXQnEuL9azQ4A5+7+xumsxs6r/WYVD0zCP/8LP8ihdeCyypMQesmsP+WyAew4g7l5Ah23BjdYyoVg=="></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Links Landing Page</title>
@@ -304,6 +304,7 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 0.9rem;
+      margin-bottom: 2rem;
     }
 
     .link-button {
@@ -334,6 +335,59 @@
       width: 1.1rem;
       height: 1.1rem;
       flex: none;
+    }
+
+    .share-section {
+      border-top: 1px solid rgba(30, 37, 32, 0.12);
+      padding-top: 2rem;
+    }
+
+    .share-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: #637268;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .share-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 0.8rem;
+    }
+
+    .share-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3rem;
+      padding: 0.75rem;
+      border: 1px solid rgba(30, 37, 32, 0.13);
+      border-radius: 0.75rem;
+      background: #fff;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      box-shadow: 0 3px 0 rgba(30, 37, 32, 0.06);
+      transition: background 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .share-button:hover {
+      background: var(--coral);
+      color: #fff;
+      box-shadow: 0 5px 0 rgba(30, 37, 32, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .share-button svg {
+      width: 1.3rem;
+      height: 1.3rem;
     }
 
     .footer-line {
@@ -385,6 +439,10 @@
         grid-template-columns: 1fr;
       }
 
+      .share-buttons {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      }
+
       .footer-line {
         align-items: flex-start;
         flex-direction: column;
@@ -409,8 +467,7 @@
      <div>
       <p data-template-id="hero-eyebrow" class="canva-text eyebrow" style="color: rgb(226, 94, 69); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.1rem;">interior designer, lifestyle curator</p>
       <h1 data-template-id="hero-name" class="canva-text hero-title" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 40px; line-height: 1;">Amelia Darius</h1>
-      <p data-template-id="hero-tagline" class="canva-text hero-copy" style="color: rgb(76, 87, 79); font-weight: 400; font-style: normal; font-size: 19px; line-height: 1.65;">If your home is not becoming to you,
-you need to be coming to us</p><a data-template-id="hero-cta" class="canva-button hero-cta" href="#links" style="background: rgb(51, 72, 61); color: rgb(255, 255, 255);"> <span data-template-id="hero-cta-text" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Explore all links</span> <i data-lucide="arrow-down-right" aria-hidden="true"></i> </a>
+      <p data-template-id="hero-tagline" class="canva-text hero-copy" style="color: rgb(76, 87, 79); font-weight: 400; font-style: normal; font-size: 19px; line-height: 1.65;">If your home is not becoming to you, you need to be coming to us</p><a data-template-id="hero-cta" class="canva-button hero-cta" href="#links" style="background: rgb(51, 72, 61); color: rgb(255, 255, 255);"> <span data-template-id="hero-cta-text" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Explore all links</span> <i data-lucide="arrow-down-right" aria-hidden="true"></i> </a>
      </div>
      <div class="hero-photo-wrap">
       <img data-template-id="hero-image" class="canva-image hero-photo" loading="lazy" src="assets/images/photo-3.jpg" alt="Woman standing beside a coffee table in a bright living room">
@@ -418,15 +475,15 @@ you need to be coming to us</p><a data-template-id="hero-cta" class="canva-butto
     </section>
     <section id="about" class="section-rule section-grid" aria-labelledby="about-title">
      <div>
-      <p data-template-id="about-kicker" class="canva-text section-kicker" style="color: rgb(99, 114, 104); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.1rem;">                                                                                A little about me</p>
-      <h2 data-template-id="about-title" class="canva-text section-title" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 29px;">                                                                                        About</h2>
+      <p data-template-id="about-kicker" class="canva-text section-kicker" style="color: rgb(99, 114, 104); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.1rem;">A little about me</p>
+      <h2 data-template-id="about-title" class="canva-text section-title" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 29px;">About</h2>
      </div>
-     <p data-template-id="about-copy" class="canva-text about-copy" style="color: rgb(51, 72, 61); font-weight: 400; font-style: italic; font-size: 23px; line-height: 1.65;">Born and raised in the San Francisco Bay Area, Amelia comes from a family of Interior Designers. It all started with her Grandfather Saviour Schembri who was a Furniture Designer for Randolph and Hein. He was commissioned to create furniture for Madonna's personal residence in Los Angeles, many NBA players as well as TV sets like Falcon Crest (just to name a few). It was through his teaching of textiles and furniture design that her interest was sparked.  Amelia has over 30 years in the Real Estate Industry ranging from Title &amp; Escrow Management as well as a successful investor of several profitable short term rentals in the states and abroad. She has a keen sense of the industry as a whole from the legalities of permits and lot lines, mixed with an eye for design. She can help guide you through the whole process whether it is a full remodel, refreshing your home or just in need of some organization. </p>
+     <p data-template-id="about-copy" class="canva-text about-copy" style="color: rgb(51, 72, 61); font-weight: 400; font-style: italic; font-size: 23px; line-height: 1.65;">Born and raised in the San Francisco Bay Area, Amelia comes from a family of Interior Designers. It all started with her Grandfather Saviour Schembrí who was a Furniture Designer for Randolph and Hein. He was commissioned to create furniture for Madonna's personal residence in Los Angeles, many NBA players as well as TV sets like Falcon Crest (just to name a few). It was through his teaching of textiles and furniture design that her interest was sparked. Amelia has over 30 years in the Real Estate Industry ranging from Title & Escrow Management as well as a successful investor of several profitable short term rentals in the states and abroad. She has a keen sense of the industry as a whole from the legalities of permits and lot lines, mixed with an eye for design. She can help guide you through the whole process whether it is a full remodel, refreshing your home or just in need of some organization. </p>
     </section>
     <section id="gallery" class="section-rule section-grid" aria-labelledby="gallery-title">
      <div>
-      <p data-template-id="gallery-kicker" class="canva-text section-kicker" style="color: rgb(99, 114, 104); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.1rem;">                                                                                </p>
-      <h2 data-template-id="gallery-title" class="canva-text section-title" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 24px;">                                                                                                           </h2>
+      <p data-template-id="gallery-kicker" class="canva-text section-kicker" style="color: rgb(99, 114, 104); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.1rem;">featured work</p>
+      <h2 data-template-id="gallery-title" class="canva-text section-title" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 24px;">Gallery</h2>
      </div>
      <div>
       <p data-template-id="gallery-description" class="canva-text gallery-intro" style="color: rgb(88, 100, 92); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;"></p>
@@ -436,4 +493,140 @@ you need to be coming to us</p><a data-template-id="hero-cta" class="canva-butto
         <div class="gallery-shade"></div>
         <figcaption data-template-id="gallery-caption-1" class="canva-text gallery-caption" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;"></figcaption>
        </figure>
-... (truncated for brevity) ...
+       <figure class="gallery-card">
+        <img data-template-id="gallery-image-2" class="canva-image gallery-image" loading="lazy" src="assets/images/photo-2.jpg" alt="Modern kitchen with white cabinetry and stainless steel appliances">
+        <div class="gallery-shade"></div>
+        <figcaption data-template-id="gallery-caption-2" class="canva-text gallery-caption" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;"></figcaption>
+       </figure>
+       <figure class="gallery-card">
+        <img data-template-id="gallery-image-3" class="canva-image gallery-image" loading="lazy" src="assets/images/photo-1.jpg" alt="Elegant dining room with statement chandelier">
+        <div class="gallery-shade"></div>
+        <figcaption data-template-id="gallery-caption-3" class="canva-text gallery-caption" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;"></figcaption>
+       </figure>
+       <figure class="gallery-card">
+        <img data-template-id="gallery-image-4" class="canva-image gallery-image" loading="lazy" src="assets/images/photo-2.jpg" alt="Cozy bedroom with soft lighting">
+        <div class="gallery-shade"></div>
+        <figcaption data-template-id="gallery-caption-4" class="canva-text gallery-caption" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;"></figcaption>
+       </figure>
+       <figure class="gallery-card">
+        <img data-template-id="gallery-image-5" class="canva-image gallery-image" loading="lazy" src="assets/images/photo-1.jpg" alt="Contemporary bathroom design">
+        <div class="gallery-shade"></div>
+        <figcaption data-template-id="gallery-caption-5" class="canva-text gallery-caption" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;"></figcaption>
+       </figure>
+       <figure class="gallery-card">
+        <img data-template-id="gallery-image-6" class="canva-image gallery-image" loading="lazy" src="assets/images/photo-2.jpg" alt="Living space with artwork and furnishings">
+        <div class="gallery-shade"></div>
+        <figcaption data-template-id="gallery-caption-6" class="canva-text gallery-caption" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;"></figcaption>
+       </figure>
+      </div>
+     </div>
+    </section>
+    <section id="links" class="section-rule section-grid" aria-labelledby="links-title">
+     <div class="links-panel">
+      <h2 data-template-id="links-title" class="canva-text section-title" style="color: rgb(30, 37, 32); font-weight: 700; font-style: normal; font-size: 32px; margin-bottom: 0.5rem;">All links</h2>
+      <p class="links-description">Find all my important links, social media, and ways to get in touch below.</p>
+      <div class="links-list">
+       <a href="https://instagram.com" class="link-button" target="_blank" rel="noopener noreferrer">
+        <span>Instagram</span>
+        <i data-lucide="instagram" aria-hidden="true"></i>
+       </a>
+       <a href="mailto:contact@ameliadarius.com" class="link-button">
+        <span>Email</span>
+        <i data-lucide="mail" aria-hidden="true"></i>
+       </a>
+       <a href="tel:+14155551234" class="link-button">
+        <span>Phone</span>
+        <i data-lucide="phone" aria-hidden="true"></i>
+       </a>
+       <a href="https://linkedin.com" class="link-button" target="_blank" rel="noopener noreferrer">
+        <span>LinkedIn</span>
+        <i data-lucide="linkedin" aria-hidden="true"></i>
+       </a>
+      </div>
+
+      <!-- Share Section -->
+      <div class="share-section">
+       <label class="share-label">Share this page</label>
+       <div class="share-buttons">
+        <button class="share-button" onclick="shareVia('facebook')" title="Share on Facebook">
+         <i data-lucide="facebook" aria-hidden="true"></i>
+        </button>
+        <button class="share-button" onclick="shareVia('twitter')" title="Share on Twitter">
+         <i data-lucide="twitter" aria-hidden="true"></i>
+        </button>
+        <button class="share-button" onclick="shareVia('linkedin')" title="Share on LinkedIn">
+         <i data-lucide="linkedin" aria-hidden="true"></i>
+        </button>
+        <button class="share-button" onclick="shareVia('email')" title="Share via Email">
+         <i data-lucide="mail" aria-hidden="true"></i>
+        </button>
+        <button class="share-button" onclick="copyLink()" title="Copy link to clipboard">
+         <i data-lucide="link-2" aria-hidden="true"></i>
+        </button>
+       </div>
+      </div>
+     </div>
+    </section>
+   </main>
+   <footer class="section-rule">
+    <div class="content-frame footer-line">
+     <p>&copy; 2024 Amelia Darius. All rights reserved.</p>
+     <p>Interior Design &amp; Lifestyle Curation</p>
+    </div>
+   </footer>
+  </div>
+
+  <script>
+    // Social share functionality
+    const pageUrl = window.location.href;
+    const pageTitle = document.title;
+
+    function shareVia(platform) {
+      let shareUrl = '';
+
+      switch(platform) {
+        case 'facebook':
+          shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+          break;
+        case 'twitter':
+          shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(pageTitle)}`;
+          break;
+        case 'linkedin':
+          shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`;
+          break;
+        case 'email':
+          shareUrl = `mailto:?subject=${encodeURIComponent(pageTitle)}&body=${encodeURIComponent(`Check this out: ${pageUrl}`)}`;
+          break;
+      }
+
+      if (shareUrl) {
+        if (platform === 'email') {
+          window.location.href = shareUrl;
+        } else {
+          window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+      }
+    }
+
+    function copyLink() {
+      navigator.clipboard.writeText(pageUrl).then(() => {
+        // Visual feedback
+        const buttons = document.querySelectorAll('.share-button');
+        const copyButton = buttons[buttons.length - 1];
+        const originalTitle = copyButton.title;
+        copyButton.title = 'Copied!';
+        copyButton.style.background = 'var(--coral)';
+        copyButton.style.color = '#fff';
+
+        setTimeout(() => {
+          copyButton.title = originalTitle;
+          copyButton.style.background = '';
+          copyButton.style.color = '';
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy link:', err);
+      });
+    }
+  </script>
+ </body>
+</html>
